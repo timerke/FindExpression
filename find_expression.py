@@ -27,7 +27,7 @@ def solve_task(required_result):
             for sign in ('+', '-'):
                 exp_new = expression[:i] + sign + expression[i:]
                 result = eval(f'{exp_new}')
-                if result == 200:
+                if result == required_result:
                     result_expressions.add(exp_new)
                 if exp_new[i + 1] == '0':
                     return 0
